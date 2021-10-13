@@ -93,23 +93,14 @@ As stated in the ResNet paper [[8]](#8), the problem of Vanishing/Exploding grad
 But still, while adding the bottleneck dense layers on top of our transfer learning base models, we witness the Vanishing Gradient Problem. 
 We have submitted models for different fully connected layer combinations for DenseNet [[9]](#9) and ResNet [[8]](#8), to get a substantive observation of the Vanishing Gradient Problem.
 
-| Architecture                | Accuracy |   
-|-----------------------------|----------|
-| **densenet**                    |**0.77045**  |   
-| densenet+16                 | 0.72179  |   
-| densenet+64+16              | 0.74275  |  
-| densenet+256+64+16          | 0.70655  |   
-| densenet+512+256+64+16      | 0.69944  |   
-| densenet+1024+512+256+64+16 | 0.67220  |  
-
-| Architecture              | Accuracy |  
-|---------------------------|----------|
-| **resnet**                    |**0.76805**  |   
-| resnet+16                 | 0.72908  | 
-| resnet+64+16              | 0.72280  |  
-| resnet+256+64+16          | 0.71283  |   
-| resnet+512+256+64+16      | 0.70046  |   
-| resnet+1024+512+256+64+16 | 0.65060  |  
+| Architecture                | Accuracy | Architecture              | Accuracy | 
+|-----------------------------|----------|---------------------------|----------|
+| **densenet**                    | **0.77045**  | **resnet**                    | **0.76805**  |   
+| densenet+16                 | 0.72179  | resnet+16                 | 0.72908  |   
+| densenet+64+16              | 0.74275  | resnet+64+16              | 0.72280  |  
+| densenet+256+64+16          | 0.70655  | resnet+256+64+16          | 0.71283  |     
+| densenet+512+256+64+16      | 0.69944  | resnet+512+256+64+16      | 0.70046  |   
+| densenet+1024+512+256+64+16 | 0.67220  | resnet+1024+512+256+64+16 | 0.65060  |   
 
 Therefore, we have replaced the top layer of the imagenet pre-trained model with a linear layer, having the previous layer input size, predicting Sigmoid probablities for the 6 classes. For training the model, we fine tune all the layers of the model, i.e. the weights of all the layers backpropagate to update its values on the train dataset. The values of the 6 output neurons are compared with the threshold to determine the labels.
 
