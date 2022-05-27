@@ -26,7 +26,7 @@ Although computer vision-based models have shown promise for plant disease ident
 
 The Plant Pathology 2021-FGVC8 Dataset [[1]](#1) contains approximately 23,000 high-quality RGB images of apple foliar diseases, including a large expert-annotated disease dataset. This dataset reflects real field scenarios by representing non-homogeneous backgrounds of leaf images taken at different maturity stages and at different times of day under different focal camera settings.
 
-But for faster image loading and processing, we use the 256x256 resized version of the original rgb images, thanks to <a href="https://www.kaggle.com/ankursingh12/resized-plant2021/version/1">this</a> dataset.
+But for a faster image loading and processing, we use the 256x256 resized version of the original rgb images, thanks to <a href="https://www.kaggle.com/ankursingh12/resized-plant2021/version/1">this</a> dataset.
 
 ## Model Architecture using Transfer Learning <a name="approach"></a>
 Convolutional neural networks (CNNs) are the most dominant machine learning approach for Visual Object Recognition. In practice, Visual Recognition systems have gained widespread attention after the release of the publicly available imagenet dataset [[2]](#2) containing 14 million images and 22 thousand visual categories. 
